@@ -1,0 +1,31 @@
+import tkinter as tk
+from tkinter import messagebox
+
+def run_messages():
+    # Initialize tkinter and hide the main background window
+    root = tk.Tk()
+    root.withdraw()
+    
+    # Make the dialogs appear on top of other windows
+    root.attributes("-topmost", True)
+
+    # The sequence of messages
+    messages = [
+        "Pero what if ano",
+        "What if hindi ka nalang umalis",
+        "Nung mga oras na yun",
+        "What if pinaglaban mo nalang",
+        "Ang meron tayo",
+        "Pero wala eh",
+        "Siya yung pinili"
+    ]
+
+    # Loop through and show each message box
+    for msg in messages:
+        messagebox.showinfo("Message", msg)
+
+    # Close the hidden root window when finished
+    root.destroy()
+
+if __name__ == "__main__":
+    run_messages()
